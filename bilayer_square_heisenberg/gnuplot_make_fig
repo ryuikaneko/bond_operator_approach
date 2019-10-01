@@ -1,0 +1,12 @@
+set xrange [:]
+set yrange [:]
+set xlabel "J"
+set ylabel "Gap(pi,pi)"
+
+set term png
+set output "fig.png"
+
+set label 1 "See Fig.2 in DOI:10.1143/JPSJ.68.247" at graph 0.05,0.05
+
+p \
+"dat" u 1:6 w lp ti ""

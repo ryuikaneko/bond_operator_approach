@@ -1,0 +1,13 @@
+set xrange [0:1]
+set yrange [0:]
+set xlabel "J'/J"
+set ylabel "J_d/J"
+
+set term png
+set output "fig_1.png"
+
+p \
+"dat_S0.5" u 3:5 w lp ti "S=1/2", \
+"dat_S1.0" u 3:5 w lp ti "S=1", \
+"dat_S1.5" u 3:5 w lp ti "S=3/2", \
+"dat_S2.0" u 3:5 w lp ti "S=2"

@@ -1,0 +1,16 @@
+set xrange [0:1]
+set yrange [0:]
+set xlabel "J'/J"
+set ylabel "J_d/J/[S(S+1)]"
+
+set term png
+set output "fig_2.png"
+
+S2(S)=S*(S+1.0)
+
+p \
+"dat_S0.5" u 3:($5/S2(0.5)) w lp ti "S=1/2", \
+"dat_S1.0" u 3:($5/S2(1.0)) w lp ti "S=1", \
+"dat_S1.5" u 3:($5/S2(1.5)) w lp ti "S=3/2", \
+"dat_S2.0" u 3:($5/S2(2.0)) w lp ti "S=2"
+
